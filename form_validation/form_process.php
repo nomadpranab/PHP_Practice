@@ -46,11 +46,20 @@ function test_input($data) {
 
 <?php
 // Display submitted data
-if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($nameErr) && empty($emailErr)) {
-    echo "Name: $name<br>";
-    echo "Email: $email<br>";
-} else {
-    echo "Form submission unsuccessful. Please check your inputs again.";
+if ($_SERVER["REQUEST_METHOD"] == "POST")
+{
+    if(!empty($emailErr))
+    {
+        echo "Email is invalid";
+    }
+    else if(!empty($nameErr))
+    {
+        echo "Name is invalid";
+    }
+    else{
+        echo "Name : $name";
+        echo "Email is $email";
+    }
 }
 ?>
 
