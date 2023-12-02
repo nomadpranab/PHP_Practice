@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($nameErr) && empty($emailErr))
     echo "Name: $name<br>";
     echo "Email: $email<br>";
 } else {
-    echo "Form submission unsuccessful. Please fill in all required fields.";
+    echo "Form submission unsuccessful. Please check your inputs again.";
 }
 ?>
 
